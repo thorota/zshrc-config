@@ -1,13 +1,12 @@
 # zshrc-config
 # エイリアス
-alias ll='ls -l'
 alias ..='cd ../'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias mkdir='(){mkdir $1;cd $1}'
+alias mkdir='(){mkdir -p $1;cd $1}'
 
 # git エイリアス
-alias gs='git status'
+alias st='git status'
 
 # ビープ音の停止(補完時)
 setopt nolistbeep
@@ -43,3 +42,8 @@ zstyle ':completion:*' list-colors "${LS_COLORS}"
 setopt complete_in_word
 # 補完候補をハイライト
 zstyle ':completion:*:default' menu select=1
+
+export DEV=/Users/rpc133/dev
+alias dev='cd $DEV'
+
+export PATH=$HOME/.nodebrew/current/bin:$PATH
